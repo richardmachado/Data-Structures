@@ -27,17 +27,28 @@ class DoublyLinkedList:
     the old head node's previous pointer accordingly.
     """
     def add_to_head(self, value):
-        pass
-        # create instance for ListNode with Value
-        # increment the DLL length attribute
 
+        # create instance for ListNode with Value
+        new_node = ListNode(value)
+        # increment the DLL length attribute
+        self.length += 1
         # of DLL is empty
             # set head and tail to the new node instance
-
+        if not self.head and not self.tail:
+            self.head = new_node
+            self.tail = new_node
         # if DLL is not empty
             # set new node's next to current head
             # set head's prev to new node
             # set head to the new node
+        else:
+        #update the locations of head and tails
+            #current head is being linked to new_head
+            new_node.next = self.head
+            #updating old head to have a prev link
+            self.head.prev = new_node
+            #updating new head to new node
+            self.head = new_node
     """
     Removes the List's current head node, making the
     current head's next node the new head of the List.
@@ -115,7 +126,10 @@ class DoublyLinkedList:
     order of the other elements of the List.
     """
     def delete(self, node):
-        pass
+        if self.prev:
+            self.prev.next = self.next
+        if self.next:
+            self.next.prev = self.prev
 
     """
     Finds and returns the maximum value of all the nodes 
