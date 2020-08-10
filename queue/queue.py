@@ -45,7 +45,7 @@ return elements in First In First Out order.
 
 # for each node
 
-from doubly_linked_list import LinkedList
+from singly_linked_list import LinkedList
 
 class Queue:
     # LIFO! Last in, first out
@@ -74,7 +74,7 @@ class Queue:
         self.storage.add_to_end(value)
 
     def dequeue(self):
-        # 🐛 stack has no len?
+        #  stack has no len?
         if self.size == 0:
             return None
         else:
