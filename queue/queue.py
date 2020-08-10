@@ -48,7 +48,7 @@ return elements in First In First Out order.
 from doubly_linked_list import LinkedList
 
 class Queue:
-    # LIFO!
+    # LIFO! Last in, first out
     def __init__(self):
         # size = len of list
         self.size = 0
