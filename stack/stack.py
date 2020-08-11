@@ -36,7 +36,7 @@ class Stack:
 
     def push(self, value):
         self.size += 1
-        self.storage.add_to_end(value)
+        self.storage.add_to_tail(value)
 
     def pop(self):
         # 🐛 stack has no len?

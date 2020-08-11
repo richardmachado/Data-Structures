@@ -71,7 +71,7 @@ class Queue:
 
     def enqueue(self, value):
         self.size += 1
-        self.storage.add_to_end(value)
+        self.storage.add_to_tail(value)
 
     def dequeue(self):
         #  stack has no len?
@@ -79,7 +79,7 @@ class Queue:
             return None
         else:
             self.size -= 1
-            return self.storage.remove_from_head()
+            return self.storage.remove_head()
 
 
 stack = Queue()
