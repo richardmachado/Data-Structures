@@ -1,15 +1,5 @@
 class Node:
-    """
-    Data:
-    Stores two pieces of data:
-    1. The Value
-    2. The Next Node
-    Methods/Behavior/Operations:
-    1. Get value
-    2. Set value
-    3. Get next
-    4. Set next
-    """
+
     def __init__(self, value=None, next_node=None):
         # the value at this linked list node
         self.value = value
@@ -28,18 +18,6 @@ class Node:
 
 
 class LinkedList:
-    """
-    Data:
-    1. A reference to the head Node
-    2. A reference to the tail Node
-    Behavior/Methods:
-    1. Add To Tail
-    2. Prepend (Add a new node and point that Node's next_node at the old Head; update Head pointer)
-    3. Remove Head
-    4. Remove Tail
-    5. Contains?
-    6. Get Maximum?
-    """
     def __init__(self):
         # reference to the head of the list
         self.head = None
@@ -115,17 +93,6 @@ class LinkedList:
     def contains(self, value):
         if not self.head:
             return False
-
-        # Recursive solution
-        # def search(node):
-        #   if node.get_value() == value:
-        #     return True
-        #   if not node.get_next():
-        #     return False
-        #   return search(node.get_next())
-        # return search(self.head)
-    
-        # get a reference to the node we're currently at; update this as we traverse the list
         current = self.head
         # check to see if we're at a valid node 
         while current:
@@ -140,7 +107,7 @@ class LinkedList:
     def get_max(self):
         if not self.head:
             return None
-        # reference to the largest value we've seen so far
+        # reference to the largest value 
         max_value = self.head.get_value()
         # reference to our current node as we traverse the list
         current = self.head.get_next()
