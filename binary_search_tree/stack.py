@@ -39,7 +39,7 @@ class Stack:
         self.storage.add_to_tail(value)
 
     def pop(self):
-        # 🐛 stack has no len?
+        #  stack has no len?
         if self.size == 0:
             return None
         else:
@@ -47,21 +47,21 @@ class Stack:
             return self.storage.remove_tail()
 
 
-stack = Stack()
-stack.push(1)
-stack.push(2)
-stack.push(3)
-stack.push(4)
-stack.push(5)
-stack.push(6)
-stack.push(7)
-stack.pop()
-stack.pop()
-stack.pop()
-stack.pop()
+# stack = Stack()
+# stack.push(1)
+# stack.push(2)
+# stack.push(3)
+# stack.push(4)
+# stack.push(5)
+# stack.push(6)
+# stack.push(7)
+# stack.pop()
+# stack.pop()
+# stack.pop()
+# stack.pop()
 
 
 
-stack.__iter__()
-print("Head:", stack.get_head())
-print("Size:", stack.size)
+# stack.__iter__()
+# print("Head:", stack.get_head())
+# print("Size:", stack.size)
